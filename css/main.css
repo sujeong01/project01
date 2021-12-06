@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+body{font-size: 1.2rem;}
+a{color: #34AC98;}
+a:hover{color:#EC6635;}
+
+#wrap{
+  width: 320px; 
+  margin: 0 auto; min-width: 320px;
+}
+
+header{height: 210px; position: relative;}
+h1{padding-top: 70px;}
+h1 a{
+  display: block; width: 120px; height: 120px; 
+  background: url(../img/food-sense.png) no-repeat top left;
+  margin: 0 auto;}
+
+nav{position: absolute; top: 0; left: 0; width: 100%; 
+  white-space: nowrap;
+  border-bottom: 1px solid #E5E5E5; text-align: center;}
+nav h2{display: none;}
+nav li{display: inline-block; margin-left: 14px;}
+nav li:first-child{margin-left: 0;}
+nav li a{display: block; padding: 15px 0; color: #34AC98;}
+
+.sns{display: none;}
+
+/* ------------------container 시작 ------------------ */
+#visual{position: relative;}
+.v_img{height: 250px; 
+  background: url(../img/visual2.jpg) no-repeat top left / auto 100%;}
+.v_txt{position: absolute; bottom: 35px; left: 0;
+  width: 100%;}
+.v_txt p{
+  padding: 10px; background-color: rgba(255,255,255,0.5);
+  color: #222;
+}  
+.v_txt p.bk{background-color: #000; color: #fff; font-size: 1rem;}
+.v_from{padding: 10px 0; text-align: right;}
+.v_navi{display: none;}
+
+#email{padding: 20px 0; margin-top: 20px;
+border-top: 1px dashed #e5e5e5; border-bottom: 1px dashed #e5e5e5;}
+#email p{padding-left: 45px; min-height: 32px;
+  background: url(../img/icon-mailinglist-32.png) no-repeat top left;}
+#email fieldset{margin-top: 20px; }
+#email fieldset label{display: none;}
+#email fieldset input, #email fieldset button{padding: 2px 4px;}
+
+#blog{padding: 30px 20px;}
+#blog li{margin-bottom: 30px;}
+#blog li .img_box{border: 1px solid #e5e5e5; 
+  padding: 8px; 
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.1);}
+#blog li .img_box img{width: 100%;}
+#blog li h4{color: #34AC98; font-weight: 300; margin-top: 15px; font-size: 1.4rem;}
+#blog li p{margin: 15px 0; color: #555;}
+#blog li .link{color: #777;}
+#blog li .link a{border-bottom: 1px dashed #e5e5e5;}
+
+footer{margin-top: 40px; padding-top: 25px; padding-bottom: 40px;
+border-top: 2px solid #e5e5e5;
+position: relative;}
+
+/* 1. 가상선택자이용
+.f_info li{display: inline-block; 
+  margin-right: 3px; padding-right: 6px;
+  position: relative;}
+.f_info li::after{content: ''; display: block; width: 1px; height: 10px;
+background-color: #aaa; 
+position: absolute; top: 5px; right: 0;}
+.f_info li:last-child::after{content: none;}
+*/
+
+/* 2. border
+.f_info li{display: inline-block; border-right: 1px solid #555; 
+  line-height: 10px;   
+  margin-right: 5px; padding-right: 5px;}
+*/
+
+/* 3. background*/
+.f_info li{display: inline-block; background: url(../img/bar.jpg) no-repeat right 5px;
+  margin-right: 5px; padding-right: 7px;
+}
+.f_info li:last-child{background: none;}
+address{margin-top: 10px;}
+.f_sns{position: absolute; top: 25px; right: 0; 
+  font-size: 0; color: transparent;}
+.f_sns a{display: inline-block;
+width: 32px; height: 32px; margin-left: 5px;
+background-repeat: no-repeat;
+background-position: -16px 0;
+opacity: 0.6;
+}
+
+.f_sns a.twit{background-image: url(../img/icon-twitter.png);}
+.f_sns a.fb{background-image: url(../img/icon-facebook.png);}
+.f_sns a.rss{background-image: url(../img/icon-rss.png);}
+.f_sns a:hover{opacity: 1;}
+
+
+@media (min-width:480px){
+  #wrap{width: 480px;}
+  header{height: 160px;}
+  h1{padding-top: 20px;}
+  h1 a{margin: 0 0 0 10px;}
+  nav{border-bottom: 0; top: 58px; right: 0; left: auto; width: auto;}
+
+  #blog{padding: 30px 0;}
+  #blog li{
+    height: 340px;
+    margin: 0 10px; 
+    width: calc((100% - 40px) / 2); float: left;}
+  }
+
+@media (min-width:710px){
+  #wrap{width: 710px;}
+  nav{top: 48px;}
+  nav li a{
+    font-size: 1.4rem; padding-top: 44px; min-width: 32px;
+    background-repeat: no-repeat; background-position: center 0;
+    transition: all 0.5s;}
+  nav li:nth-child(1) a{background-image: url(../img/nav-tastemakers.png);}
+  nav li:nth-child(2) a{background-image: url(../img/nav-blog.png);}
+  nav li:nth-child(3) a{background-image: url(../img/nav-alist.png);}
+  nav li:nth-child(4) a{background-image: url(../img/nav-contribute.png);}
+  nav li:nth-child(5) a{background-image: url(../img/nav-about.png);}
+  nav li a:hover{background-position: center 5px;}
+
+   /* ------------------container 시작 ------------------ */
+  .v_img{height: 445px;}
+  .v_txt{width: auto; left: auto; right: 0; bottom: 100px;}
+  .v_txt p{font-size: 1.6rem; padding: 15px 20px;}
+  .v_txt p.bk{font-size: 1.4rem;}
+  .v_from{position: absolute; bottom: 55px; right: 10px;
+  padding: 5px 8px; background-color: rgba(255,255,255,0.5);
+  border-radius: 8px; font-size: 1rem; color: #777;}
+  .v_navi{display: block;}
+  .v_navi li{width: 25%; float: left; text-align: center;
+  background-color: #eff8f7;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #d3ede9;
+  }
+  .v_navi li:first-child{border-left: 0;}
+  .v_navi li:last-child{border-right: 0;}
+  .v_navi li.on{background-color: #d3ede9;}
+  .v_navi li a{display: block; padding: 10px 0;}
+  .v_navi li a strong{font-weight: 300;}
+  .v_navi li a span{display: none;}
+
+  #email{position: relative;}
+  #email p{width: 440px;}
+  #email fieldset{position: absolute; top: 5px; right: 0;}
+
+  #blog li{margin: 0 20px 0 0; width: calc((100% - 60px) / 4);}
+  #blog li:last-child{margin-right: 0;}
+}
+
+@media (min-width:896px){
+  #wrap{width: 896px; margin: 40px auto; position: relative;}
+  header{width: 184px; height: auto; position: absolute; top: 0; left: 0;}
+  h1{padding-top: 0;}
+  h1 a{margin: 0;}
+  nav{position: static; margin-top: 40px; text-align: left;}
+  /* position 속성 제거 - position: static*/
+  nav li{display: block; margin-bottom: 20px; margin-left: 0;}
+  nav li a{padding: 7px 0 7px 44px; 
+  background-position: 0 center;}
+  nav li a:hover{background-position: 5px center;}
+
+  .sns{display: block; margin-top: 60px; width: 150px;}
+  .sns > div{margin-bottom: 25px;}
+  .sns > div h3{font-weight: 300; border-bottom: 1px dashed #e5e5e5;
+  padding-bottom: 4px; margin-bottom: 10px;}
+  .sns > div a{display: block;
+  border: 1px solid #e5e5e5; border-radius: 8px; font-size: 1rem; 
+  padding: 5px 0 5px 28px;
+  background-repeat: no-repeat;
+  background-position: 7px center;
+  transition: all 0.5s;
+}
+  .sns > div a:hover{background-color: #eff8f7;}
+  .sns > div.twit a{background-image: url(../img/icon-twitter-16.png);}
+  .sns > div.fb a{background-image: url(../img/icon-facebook-16.png);}
+  .sns > div p{
+    font-size: 1rem; line-height: 2; 
+    margin-bottom: 15px;}
+  
+  /*----------------container --------------------*/
+  #container{padding-left: 180px;}
+}
+
+@media (min-width:1080px){
+  #wrap{width: 1080px;}
+  .v_img{background-size: cover;}
+  .v_txt{bottom: 160px;}
+  .v_from{bottom: 120px;}
+  .v_navi li{padding:20px 10px; text-align: left;}
+  .v_navi li a strong{font-size: 1.6rem;}
+  .v_navi li a span{display: block; font-size: 1.1rem; margin-top: 5px;}
+}
